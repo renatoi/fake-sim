@@ -1,0 +1,33 @@
+{
+  "name": "intellimize-sim",
+  "version": "1.0.0",
+  "description": "Intellimize API",
+  "main": "./src/Intellimize.js",
+  "scripts": {
+    "dist": "./node_modules/.bin/webpack",
+    "start": "npm run dist && node server.js && open http://localhost:3000/",
+    "test": "./node_modules/.bin/babel-node ./tests/intellimize-test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renatoi/intellimize-sim.git"
+  },
+  "author": "Renato Iwashima",
+  "bugs": {
+    "url": "https://github.com/renatoi/intellimize-sim/issues"
+  },
+  "homepage": "https://github.com/renatoi/intellimize-sim#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "node-static": "^0.7.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "tape": "^4.8.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.5.5"
+  }
+}
