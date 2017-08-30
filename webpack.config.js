@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/init.js',
   output: {
     path: path.resolve(__dirname, 'example'),
-    filename: 'intellimize.min.js'
+    filename: 'fake.min.js'
   },
   plugins: [
     new UglifyJSPlugin()

@@ -1,22 +1,22 @@
 {
-  "name": "intellimize-sim",
+  "name": "fake-sim",
   "version": "1.0.0",
-  "description": "Intellimize API",
-  "main": "./src/Intellimize.js",
+  "description": "Fake API",
+  "main": "./src/Fake.js",
   "scripts": {
     "dist": "./node_modules/.bin/webpack",
     "start": "npm run dist && node server.js && open http://localhost:3000/",
-    "test": "./node_modules/.bin/babel-node ./tests/intellimize-test.js"
+    "test": "./node_modules/.bin/babel-node ./tests/fake-test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renatoi/intellimize-sim.git"
+    "url": "git+https://github.com/renatoi/fake-sim.git"
   },
   "author": "Renato Iwashima",
   "bugs": {
-    "url": "https://github.com/renatoi/intellimize-sim/issues"
+    "url": "https://github.com/renatoi/fake-sim/issues"
   },
-  "homepage": "https://github.com/renatoi/intellimize-sim#readme",
+  "homepage": "https://github.com/renatoi/fake-sim#readme",
   "dependencies": {
     "lodash": "^4.17.4"
   },

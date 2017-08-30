@@ -1,29 +1,29 @@
-import intellimize from './Intellimize';
+import fake from './Fake';
 
 (function(w) {
   console.log('api');
 
   function processQueue() {
-    while (intellimizeQueue.length > 0) {
+    while (fakeQueue.length > 0) {
       // remove first item of the queue and convert it to an array (arguments is an object)
-      let args = [...intellimizeQueue.shift()];
+      let args = [...fakeQueue.shift()];
       let method = args.shift();
-      if (method in intellimize) {
-        intellimize[method].apply(intellimize, args);
+      if (method in fake) {
+        fake[method].apply(fake, args);
       }
     }
   }
   
   // handle initialization
-  w.intellimizeQueue = w.intellimizeQueue || [];
+  w.fakeQueue = w.fakeQueue || [];
   
-  // process queue in case intellimizeQueue was already set
+  // process queue in case fakeQueue was already set
   processQueue();
   
   // Call processQueue() everytime push() is called from now on
-  const originalPush = intellimizeQueue.push;
-  intellimizeQueue.push = function () {
-    originalPush.apply(intellimizeQueue, [...arguments]);
+  const originalPush = fakeQueue.push;
+  fakeQueue.push = function () {
+    originalPush.apply(fakeQueue, [...arguments]);
     return processQueue();
   };
 })(window);

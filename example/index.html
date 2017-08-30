@@ -3,20 +3,20 @@
 
 <head>
   <!-- Note: Replace the CONSUMER_KEY with your consumer key -->
-  <!-- Paste the lines BELOW to install Intellimize -->
-  <script async src="./intellimize.min.js"></script>
+  <!-- Paste the lines BELOW to install Fake -->
+  <script async src="./fake.min.js"></script>
   <script>
-    window.intellimizeQueue = window.intellimizeQueue || [];
-    function intellimize() { intellimizeQueue.push(arguments); }
-    intellimize("install", "CONSUMER_KEY");
+    window.fakeQueue = window.fakeQueue || [];
+    function fake() { fakeQueue.push(arguments); }
+    fake("install", "CONSUMER_KEY");
   </script>
-  <!-- Paste the lines ABOVE to install Intellimize -->
+  <!-- Paste the lines ABOVE to install Fake -->
 
   <!-- Usage -->
   <script>
     console.log("usage");
     try {
-      intellimize("getVariations", function (variations) {
+      fake("getVariations", function (variations) {
         console.log("Variations: " + variations.join());
       });
     } catch (e) {
@@ -25,7 +25,7 @@
   </script>
   <!-- /Usage -->
 
-  <title>Intellimize API example</title>
+  <title>Fake API example</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="data:;base64,iVBORw0KGgo=">
@@ -49,7 +49,7 @@
       <h2><i class="icon-spanner-outline"></i>Less Work</h2>
     </div>
   </div>
-  <p class="info">Open the Developer Tools to see console output. To check the asynchronous behavior, edit index.html and remove the <code>async</code> attribute from the intellimize script.</p>
+  <p class="info">Open the Developer Tools to see console output. To check the asynchronous behavior, edit index.html and remove the <code>async</code> attribute from the fake script.</p>
 </body>
 
 </html>

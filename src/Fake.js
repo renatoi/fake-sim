@@ -5,9 +5,9 @@ import isString from 'lodash/isString';
 let instance = null;
 
 /**
- * Intellimize API
+ * Fake API
  */
-class Intellimize {
+class Fake {
   constructor() {
     if (!instance) {
       instance = this;
@@ -39,14 +39,14 @@ class Intellimize {
    */
   getVariations(callback) {
     if (!this.initialized) {
-      throw new Error("Intellimize was not initiallized. Make sure to call 'install' with a consumer key first.");
+      throw new Error("Fake was not initiallized. Make sure to call 'install' with a consumer key first.");
     }
 
     const variations = [1, 2, 3, 4, 5];
     // ... xhr request to retrieve list of variations
-    callback.call(Intellimize, variations);
+    callback.call(Fake, variations);
   }
 }
 
-const intellimize = new Intellimize();
-export default intellimize;
+const fake = new Fake();
+export default fake;

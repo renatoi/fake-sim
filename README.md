@@ -1,34 +1,34 @@
-# Intellimize API
+# Fake API
 
-To install Intellimize on your website, copy the snippet below and paste it after the `<head>` tag. Replace the **CONSUMER_KEY** with your consumer key.
+To install Fake on your website, copy the snippet below and paste it after the `<head>` tag. Replace the **CONSUMER_KEY** with your consumer key.
 
 ```html
-<script async src="./intellimize.min.js"></script>
+<script async src="./fake.min.js"></script>
 <script>
-  window.intellimizeQueue = window.intellimizeQueue || [];
-  function intellimize() { intellimizeQueue.push(arguments); }
+  window.fakeQueue = window.fakeQueue || [];
+  function fake() { fakeQueue.push(arguments); }
 
-  intellimize("install", "CONSUMER_KEY");
+  fake("install", "CONSUMER_KEY");
 </script>
 ```
 
-After adding the snippet above, you can use the Intellimize API to retrieve variation ids.
+After adding the snippet above, you can use the Fake API to retrieve variation ids.
 
 ```html
 <script>
-  intellimize("getVariations", function(variations) {
+  fake("getVariations", function(variations) {
       console.log("Variations: " + variations.join());
   });
 </script>
 ```
 
-This API ensures that your calls will be executed in order even if the intellimize script is still not yet loaded and ready to be executed.
+This API ensures that your calls will be executed in order even if the fake script is still not yet loaded and ready to be executed.
 
 For synchronous-only loading and module usage:
 
 ```javascript
-import { intellimize } from Intellimize;
-intellimize.getVariations((variations) => {
+import { fake } from Fake;
+fake.getVariations((variations) => {
     console.log("Variations: " + variations.join());
 });
 ```
@@ -38,8 +38,8 @@ intellimize.getVariations((variations) => {
 ### Install
 
 ```bash
-git clone git@github.com:renatoi/intellimize-sim.git
-cd intellimize-sim && npm install .
+git clone git@github.com:renatoi/fake-sim.git
+cd fake-sim && npm install .
 ```
 
 ### Start
@@ -64,9 +64,9 @@ npm run dist
 
 ------------------------------------------
 
-# Intellimize Dashboard Design Document
+# Fake Dashboard Design Document
 
-The main goal of the dashboard is to provide the best experience to Intellimize customers so they can visualize, and make smart decisions quickly, and intuively. To accomplish this goal, here's a breakdown of the main priorities of the app:
+The main goal of the dashboard is to provide the best experience to Fake customers so they can visualize, and make smart decisions quickly, and intuively. To accomplish this goal, here's a breakdown of the main priorities of the app:
 
   * Lightning fast
   * Reliable
@@ -142,7 +142,7 @@ Redux and React Router are just the most used libraries in the industry that pla
 
 Creating new types of charts for data visualization can be done using D3. For most charts I advise using Highcharts.js that provides a big set of charts maintained by a data visualization team with full support.
 
-Creating trivial charts are not hard using D3, especially given the popularity of the library and its huge community. However, I advise using Highcharts primarily because developing and maintaining charts, especially more elaborated charts, can become expensive really fast. Choosing a stable and industry-proof library allows more time to focus on other parts of the app, providing better value to Intellimize customers.
+Creating trivial charts are not hard using D3, especially given the popularity of the library and its huge community. However, I advise using Highcharts primarily because developing and maintaining charts, especially more elaborated charts, can become expensive really fast. Choosing a stable and industry-proof library allows more time to focus on other parts of the app, providing better value to Fake customers.
 
 ### Build tools
 
