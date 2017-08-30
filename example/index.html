@@ -15,9 +15,13 @@
   <!-- Usage -->
   <script>
     console.log("usage");
-    intellimize("getVariations", function (variations) {
-      console.log("Variations: " + variations.join());
-    });
+    try {
+      intellimize("getVariations", function (variations) {
+        console.log("Variations: " + variations.join());
+      });
+    } catch (e) {
+      console.log(e.message);
+    }
   </script>
   <!-- /Usage -->
 

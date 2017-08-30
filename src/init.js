@@ -23,8 +23,7 @@ import intellimize from './Intellimize';
   // Call processQueue() everytime push() is called from now on
   const originalPush = intellimizeQueue.push;
   intellimizeQueue.push = function () {
-    let args = [].slice.call(arguments, 0);
-    originalPush.apply(intellimizeQueue, args);
+    originalPush.apply(intellimizeQueue, [...arguments]);
     return processQueue();
   };
 })(window);
