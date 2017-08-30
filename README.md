@@ -86,7 +86,7 @@ The dashboard should have a thin server-side layer that has three primary roles:
 
 Most of the interface logic will reside on the client. Data validation will be on the client, and all core validations will be done on the API.
 
-## Recommendation
+### Recommendation
 
 NodeJS + Express.
 
